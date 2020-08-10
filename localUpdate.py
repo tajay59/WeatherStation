@@ -140,15 +140,6 @@ class UpdateDatabase:
                         self.syslog.syslog(self.syslog.LOG_ERR, self.file+' '+self.timeVariable.upper()+' INVALID TIME INTERVAL, FOR COLLECTION IN LOCAL DATABASE; NOTHING TO UPDATE')
                         self.logging.warning(self.file+' '+self.timeVariable.upper()+' INVALID TIME INTERVAL, FOR COLLECTION IN LOCAL DATABASE; NOTHING TO UPDATE')
                         
-                    #TimeStamp   = lower_ts
-                    #self.updatedToThisPoint = lower_ts
-                    '''
-                    for i in range(self.count):                                                # CREATE BOUNDARY ARRAY FOR BUCKET STAGE IN THE AGGREGATION
-                        boundaries.append(TimeStamp)
-                        if TimeStamp + self.boundaryInterval > upper_ts :
-                            break
-                        TimeStamp = TimeStamp + self.boundaryInterval
-                    '''
 
                     if (len(self.boundaries) <=  1) :
                         self.syslog.syslog(self.syslog.LOG_ERR, self.file+' '+self.timeVariable.upper()+' COLLECTION IN LOCAL DATABASE ALREADY UPTODATE')
